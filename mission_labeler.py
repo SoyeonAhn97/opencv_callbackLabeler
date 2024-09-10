@@ -133,12 +133,12 @@ while True:
         boxList = []
         cpy = img.copy()
         cv2.imshow('label', cpy)
-    elif key == 0: # 오른쪽 화살표 (->) 키 입력
+    elif key == 83: # 오른쪽 화살표 (->) 키 입력
         if currentIndex < len(fileNames) - 1:
             filename, ext = os.path.splitext(fileNames[currentIndex])
             saveBoxData(filename) # 현재 이미지 좌표 저장
             currentIndex += 1
             loadImage(currentIndex) # 다음 이미지 로드
-    # elif key == ord('81'): # 왼쪽 화살표(<-) 키 입력
+    # elif key == 81: # 왼쪽 화살표(<-) 키 입력
 
 cv2.destroyAllWindows()
